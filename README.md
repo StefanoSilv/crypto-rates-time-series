@@ -14,8 +14,6 @@ npm install crypto-rates-time-series --save
 
 ### Usage
 
-Explain what these tests test and why
-
 ```
 const rates = require("crypto-rates-time-series")
 ``` 
