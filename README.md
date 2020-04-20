@@ -22,7 +22,7 @@ const rates = require("crypto-rates-time-series")
 
 #### Methods 
 
-.getByDate("YYYY-MM-DD")
+###### .getByDate("YYYY-MM-DD") 
 Get the rates for the specific date passed as an argument. The format of the date must be a string as following "YYYY-MM-DD" 
 
 Example
@@ -33,7 +33,7 @@ rates.getByDate("2020-01-01").then( rates =>{
 
 ```
 
-.getByPastDays(number_of_days_back)
+###### .getByPastDays(number_of_days_back) 
 Get the rates for the date back of the number of days specified as an argument. 
 
 Example
@@ -45,40 +45,35 @@ rates.getByPastDays(2).then( rates =>{
 
 ```
 
-.getLastMonth()
+###### .getLastMonth() 
 Get the rates of the same day as today but of the last month 
 
 Example
 ```
-
 rates.getLastMonth().then( rates =>{
   console.log(rates)
 })
 
 ```
 
-.getLastYear()
+###### .getLastYear() 
 Get the rates of the same day as today but of the last year
 
 Example
 ```
-
 rates.getLastYear().then( rates =>{
   console.log(rates)
 })
-
 ```
 
-.getLastWeek()
+###### .getLastWeek() 
 Get the rates of the same day as today but of the last week
 
 Example
 ```
-
 rates.getLastWeek().then( rates =>{
   console.log(rates)
 })
-
 ```
 
 
@@ -89,7 +84,7 @@ I use [SemVer](http://semver.org/) for versioning.
 
 ## Author
 
-* **Stefano Silvestrini** - [Github](https://github.com/StefanoSilv) - [Linkedin (https://www.linkedin.com/in/silvestrinistefano/)
+* **Stefano Silvestrini** - [Github](https://github.com/StefanoSilv) - [Linkedin](https://www.linkedin.com/in/silvestrinistefano/)
 
 ## License
 
