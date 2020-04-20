@@ -3,7 +3,7 @@ A package to retrive time series of all the major cryptocurrencies
 It supports 385 cryptocurrencies including the most famous ones such as Bitcoin, Etherium, Bitcoin Cash, and Litecoin.
 The currency of referment is Euro.
 
-### Installing
+## Installing
 
 Download node at nodejs.org and install it, if you haven't already.
 
@@ -12,15 +12,15 @@ npm install crypto-rates-time-series --save
 ```
 
 
-### Usage
+## Usage
 
 ```
 const rates = require("crypto-rates-time-series")
 ``` 
 
-#### Methods 
+### Methods 
 
-##### .getByDate("YYYY-MM-DD") 
+#### .getByDate("YYYY-MM-DD") 
 Get the rates for the specific date passed as an argument. The format of the date must be a string as following "YYYY-MM-DD" 
 
 Example
@@ -31,7 +31,7 @@ rates.getByDate("2020-01-01").then( rates =>{
 
 ```
 
-##### .getByPastDays(number_of_days_back) 
+#### .getByPastDays(number_of_days_back) 
 Get the rates for the date back of the number of days specified as an argument. 
 
 Example
@@ -43,7 +43,7 @@ rates.getByPastDays(2).then( rates =>{
 
 ```
 
-##### .getToday() 
+#### .getToday() 
 Get the rates of today. It updates every two hours so these might not be the current rates.
 
 Example
@@ -54,7 +54,7 @@ rates.getToday().then( rates =>{
 
 ```
 
-##### .getYesterday() 
+#### .getYesterday() 
 Get the rates of yesterday.
 
 Example
@@ -65,7 +65,7 @@ rates.getYesterday().then( rates =>{
 
 ```
 
-##### .getLastMonth() 
+#### .getLastMonth() 
 Get the rates of the same day as today but of the last month 
 
 Example
@@ -76,7 +76,7 @@ rates.getLastMonth().then( rates =>{
 
 ```
 
-##### .getLastYear() 
+#### .getLastYear() 
 Get the rates of the same day as today but of the last year
 
 Example
@@ -86,7 +86,7 @@ rates.getLastYear().then( rates =>{
 })
 ```
 
-##### .getLastWeek() 
+#### .getLastWeek() 
 Get the rates of the same day as today but of the last week
 
 Example
@@ -96,7 +96,7 @@ rates.getLastWeek().then( rates =>{
 })
 ```
 
-#### Response 
+### Response 
 The response is an object containing three keys:
 * currency: 'EUR' //The currency of referment (always Euro)
 * date: 'YYYY-MM-DD' //The date to which the rates refered to
@@ -107,7 +107,7 @@ Example:
   { 
   currency: 'EUR',
   rates:
-   { '611': 0.357853,
+   { 
      ABC: 55.163229,
      ACP: 0.01373,
      ACT: 0.004138,
@@ -121,8 +121,9 @@ Example:
      ZIL: 0.003993,
      ZNY: 0.018391,
      ZRX: 0.162487,
-     ZSC: 0.00019 },
-    date: '2020-04-19' 
+     ZSC: 0.00019 
+    },
+  date: '2020-04-19' 
   }
 ```
 
