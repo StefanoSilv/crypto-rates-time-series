@@ -1,6 +1,6 @@
 {
   "name": "crypto-rates-time-series",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "\"A package to retrice time series of all the major cryptocurrencies\"",
   "main": "index.js",
   "scripts": {

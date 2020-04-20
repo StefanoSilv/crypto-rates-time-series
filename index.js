@@ -5,7 +5,11 @@ module.exports = {
     return axios
       .get(`https://exchange-rates-library.herokuapp.com/rates?date=${date}`)
       .then(res => {
-        return res.data;
+        return {
+          currency: res.data.rate[0].target,
+          rates: res.data.rate[0].rates[0],
+          date: res.data.rate[0].date.toString().substr(0, 10)
+        };
       })
       .catch(err => {
         return { err };
@@ -23,7 +27,11 @@ module.exports = {
           .substr(0, 10)}`
       )
       .then(res => {
-        return res.data;
+        return {
+          currency: res.data.rate[0].target,
+          rates: res.data.rate[0].rates[0],
+          date: res.data.rate[0].date.toString().substr(0, 10)
+        };
       })
       .catch(err => {
         return { err };
@@ -43,7 +51,11 @@ module.exports = {
         `https://exchange-rates-library.herokuapp.com/rates?date=${dateQuery}`
       )
       .then(res => {
-        return res.data;
+        return {
+          currency: res.data.rate[0].target,
+          rates: res.data.rate[0].rates[0],
+          date: res.data.rate[0].date.toString().substr(0, 10)
+        };
       })
       .catch(err => {
         return { err };
@@ -61,7 +73,11 @@ module.exports = {
         `https://exchange-rates-library.herokuapp.com/rates?date=${dateQuery}`
       )
       .then(res => {
-        return res.data;
+        return {
+          currency: res.data.rate[0].target,
+          rates: res.data.rate[0].rates[0],
+          date: res.data.rate[0].date.toString().substr(0, 10)
+        };
       })
       .catch(err => {
         return { err };
@@ -77,7 +93,51 @@ module.exports = {
           .substr(0, 10)}`
       )
       .then(res => {
-        return res.data;
+        return {
+          currency: res.data.rate[0].target,
+          rates: res.data.rate[0].rates[0],
+          date: res.data.rate[0].date.toString().substr(0, 10)
+        };
+      })
+      .catch(err => {
+        return { err };
+      });
+  },
+  getToday: () => {
+    let date = new Date();
+    let pastDate = new Date(date.setDate(date.getDate())).toISOString();
+    return axios
+      .get(
+        `https://exchange-rates-library.herokuapp.com/rates?date=${pastDate
+          .toString()
+          .substr(0, 10)}`
+      )
+      .then(res => {
+        return {
+          currency: res.data.rate[0].target,
+          rates: res.data.rate[0].rates[0],
+          date: res.data.rate[0].date.toString().substr(0, 10)
+        };
+      })
+      .catch(err => {
+        return { err };
+      });
+  },
+  getYesterday: () => {
+    let date = new Date();
+    let pastDate = new Date(date.setDate(date.getDate() - 1)).toISOString();
+    return axios
+      .get(
+        `https://exchange-rates-library.herokuapp.com/rates?date=${pastDate
+          .toString()
+          .substr(0, 10)}`
+      )
+      .then(res => {
+        return {
+          currency: res.data.rate[0].target,
+          rates: res.data.rate[0].rates[0],
+          date: res.data.rate[0].date.toString().substr(0, 10)
+        };
       })
       .catch(err => {
         return { err };
