@@ -1,8 +1,8 @@
 const axios = require("axios");
 
 module.exports = {
-  getByDate: date => {
-    axios
+  getByDate: async date => {
+    return axios
       .get(`https://exchange-rates-library.herokuapp.com/rates?date=${date}`)
       .then(res => {
         return res.data;
@@ -16,14 +16,13 @@ module.exports = {
     let pastDate = new Date(
       date.setDate(date.getDate() - number)
     ).toISOString();
-    axios
+    return axios
       .get(
         `https://exchange-rates-library.herokuapp.com/rates?date=${pastDate
           .toString()
           .substr(0, 10)}`
       )
       .then(res => {
-        console.log(res.data);
         return res.data;
       })
       .catch(err => {
@@ -39,12 +38,11 @@ module.exports = {
       .padStart(2, "0");
     let day = pastDate.toString().substr(7, 3);
     let dateQuery = year + month + day;
-    axios
+    return axios
       .get(
         `https://exchange-rates-library.herokuapp.com/rates?date=${dateQuery}`
       )
       .then(res => {
-        console.log(res.data);
         return res.data;
       })
       .catch(err => {
@@ -58,12 +56,11 @@ module.exports = {
     let month = pastDate.toString().substr(4, 3);
     let day = pastDate.toString().substr(7, 3);
     let dateQuery = year + month + day;
-    axios
+    return axios
       .get(
         `https://exchange-rates-library.herokuapp.com/rates?date=${dateQuery}`
       )
       .then(res => {
-        console.log(res.data);
         return res.data;
       })
       .catch(err => {
