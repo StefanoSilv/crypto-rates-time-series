@@ -29,7 +29,7 @@ module.exports = {
         return { err };
       });
   },
-  getPastMonth: () => {
+  getLastMonth: () => {
     let date = new Date();
     let pastDate = new Date(date.setDate(date.getDate())).toISOString();
     let year = pastDate.toString().substr(0, 5);
@@ -49,7 +49,7 @@ module.exports = {
         return { err };
       });
   },
-  getPastYear: () => {
+  getLastYear: () => {
     let date = new Date();
     let pastDate = new Date(date.setDate(date.getDate())).toISOString();
     let year = (Number(pastDate.toString().substr(0, 4)) - 1).toString();
@@ -59,6 +59,22 @@ module.exports = {
     return axios
       .get(
         `https://exchange-rates-library.herokuapp.com/rates?date=${dateQuery}`
+      )
+      .then(res => {
+        return res.data;
+      })
+      .catch(err => {
+        return { err };
+      });
+  },
+  getLastWeek: () => {
+    let date = new Date();
+    let pastDate = new Date(date.setDate(date.getDate() - 7)).toISOString();
+    return axios
+      .get(
+        `https://exchange-rates-library.herokuapp.com/rates?date=${pastDate
+          .toString()
+          .substr(0, 10)}`
       )
       .then(res => {
         return res.data;
