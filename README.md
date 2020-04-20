@@ -1,4 +1,4 @@
-[](https://img.shields.io/npm/l/crypto-rates-time-series)
+![license](https://img.shields.io/npm/l/crypto-rates-time-series)
 
 # crypto-rates-time-series
 A package to retrieve time series of all the major cryptocurrencies
