@@ -1,3 +1,5 @@
+[](https://img.shields.io/npm/l/crypto-rates-time-series)
+
 # crypto-rates-time-series
 A package to retrieve time series of all the major cryptocurrencies
 It supports 385 cryptocurrencies including the most famous ones such as Bitcoin, Etherium, Bitcoin Cash, and Litecoin.
