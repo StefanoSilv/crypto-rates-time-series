@@ -1,7 +1,7 @@
 # crypto-rates-time-series
-A package to retrive time series of all the major cryptocurrencies
+A package to retrieve time series of all the major cryptocurrencies
 It supports 385 cryptocurrencies including the most famous ones such as Bitcoin, Etherium, Bitcoin Cash, and Litecoin.
-The currency of referment is Euro.
+The base currency is Euro.
 
 ## Installing
 
@@ -98,9 +98,9 @@ rates.getLastWeek().then( rates =>{
 
 ### Response 
 The response is an object containing three keys:
-* currency: 'EUR' //The currency of referment (always Euro)
-* date: 'YYYY-MM-DD' //The date to which the rates refered to
-* rates: {} //The object with the rates
+* currency: 'EUR' //The base currency (always Euro)
+* date: 'YYYY-MM-DD' //The date of the rates
+* rates: {} //An object with the rates
 
 Example:
 ```
