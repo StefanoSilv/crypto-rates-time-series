@@ -43,6 +43,28 @@ rates.getByPastDays(2).then( rates =>{
 
 ```
 
+##### .getToday() 
+Get the rates of today. It updates every two hours so these might not be the current rates.
+
+Example
+```
+rates.getToday().then( rates =>{
+  console.log(rates)
+})
+
+```
+
+##### .getYesterday() 
+Get the rates of yesterday.
+
+Example
+```
+rates.getYesterday().then( rates =>{
+  console.log(rates)
+})
+
+```
+
 ##### .getLastMonth() 
 Get the rates of the same day as today but of the last month 
 
@@ -72,6 +94,36 @@ Example
 rates.getLastWeek().then( rates =>{
   console.log(rates)
 })
+```
+
+#### Response 
+The response is an object containing three keys:
+* currency: 'EUR' //The currency of referment (always Euro)
+* date: 'YYYY-MM-DD' //The date to which the rates refered to
+* rates: {} //The object with the rates
+
+Example:
+```
+  { 
+  currency: 'EUR',
+  rates:
+   { '611': 0.357853,
+     ABC: 55.163229,
+     ACP: 0.01373,
+     ACT: 0.004138,
+     ADA: 0.033091,
+     ADX: 0.052219,
+     ADZ: 0.002115,
+     AE: 0.093857,
+     ...
+     ...
+     ...
+     ZIL: 0.003993,
+     ZNY: 0.018391,
+     ZRX: 0.162487,
+     ZSC: 0.00019 },
+    date: '2020-04-19' 
+  }
 ```
 
 
