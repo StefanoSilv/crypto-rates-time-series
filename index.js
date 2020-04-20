@@ -1,7 +1,7 @@
 const axios = require("axios");
 
 module.exports = {
-  getByDate: async date => {
+  getByDate: date => {
     return axios
       .get(`https://exchange-rates-library.herokuapp.com/rates?date=${date}`)
       .then(res => {
