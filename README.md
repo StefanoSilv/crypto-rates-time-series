@@ -36,7 +36,7 @@ Get the rates for the date back of the number of days specified as an argument.
 
 Example
 ```
-//The rates of two days ago
+// The rates of two days ago
 rates.getByPastDays(2).then( rates =>{
   console.log(rates)
 })
