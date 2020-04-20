@@ -27,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/StefanoSilv/crypto-rates-time-series/issues"
   },
-  "homepage": "https://github.com/StefanoSilv/crypto-rates-time-series#readme"
+  "homepage": "https://github.com/StefanoSilv/crypto-rates-time-series#readme",
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
 }
