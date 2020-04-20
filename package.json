@@ -1,0 +1,31 @@
+{
+  "name": "crypto-rates-time-series",
+  "version": "1.0.0",
+  "description": "\"A package to retrice time series of all the major cryptocurrencies\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StefanoSilv/crypto-rates-time-series.git"
+  },
+  "keywords": [
+    "crypto",
+    "rates",
+    "exchange",
+    "time",
+    "series",
+    "bitcoin",
+    "etherium",
+    "litecoin",
+    "cryptocurrencies",
+    "cryptocurrency"
+  ],
+  "author": "Stefano Silvestrini",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/StefanoSilv/crypto-rates-time-series/issues"
+  },
+  "homepage": "https://github.com/StefanoSilv/crypto-rates-time-series#readme"
+}
